@@ -1,0 +1,17 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v2.3.0
+    - name: ghaction-cmake
+      uses: lpenz/ghaction-cmake@v0.1
+      with:
+        # Compiler
+        cc: clang
